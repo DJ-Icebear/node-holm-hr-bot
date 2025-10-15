@@ -6,7 +6,7 @@ A minimalist chat UI built on Next.js, Tailwind, and shadcn/ui, designed as a st
 
 ### Getting Started
 
-First, run the development server:
+1. First, run the development server:
 
 ```bash
 npm run dev
@@ -18,7 +18,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to [OpperAI](https://opper.ai/) to create an account
+3. Add an .env-file with your `OPPER_API_KEY`
+
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser and start chatting.
 
 ### Extending
 
