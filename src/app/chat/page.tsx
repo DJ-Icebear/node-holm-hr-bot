@@ -18,6 +18,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlusIcon } from "@radix-ui/react-icons";
 import { KeyboardEvent, useRef, useState } from "react";
 import Link from "next/link";
+import { handleMessage } from "@/lib/actions";
 
 interface Message {
   message: String;
@@ -51,18 +52,20 @@ export default function Chat() {
     }
   };
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (userInput) {
       addMessage({ message: userInput, type: "user" });
       setUserInput(""); // clear the textarea
 
+
+      const reply = await handleMessage(userInput);
       // Here's is where you would put your request to the
       // chat bot server, a reply from the server should be
       // added using the function: addMessage({ message: "ok", type: "bot" });
       // for now we will only simulate the reply
-      setTimeout(() => {
-        addMessage({ message: "ok", type: "bot" });
-      }, (Math.floor(Math.random() * (15 - 10 + 1)) + 10) * 100);
+      
+      addMessage({ message: reply, type: "bot" });
+      
     }
   };
 

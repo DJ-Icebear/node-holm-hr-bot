@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen items-center justify-center p-24">
       <div className="font-bold">
         <Link href="https://github.com/deathg0d/next-chat" target="_blank">
-          deathg0d/next-chat
+          Node:Holm HR Bot
         </Link>
       </div>
       <div className="flex gap-1">
